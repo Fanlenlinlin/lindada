@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/lineTV"
+            android:layout_width="0.5dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="16dp"
+            android:background="#999"/>
+        <ImageView
+            android:id="@+id/yuandianIV"
+            android:layout_width="8dp"
+            android:layout_height="8dp"
+            android:layout_marginLeft="1dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/yuanshapegrey_999999"/>
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="14dp"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/timeTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#000"
+            android:text="2016-05-12 13:19:49"/>
+
+        <TextView
+            android:id="@+id/contentTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:textSize="12sp"
+            android:textColor="#999"
+            android:text="快件已签收,签收人是本人，签收网点是上海宝山吴淞公司(021-66769001，021-66769002)"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="#ccc"
+            android:layout_marginTop="14dp"/>
+    </LinearLayout>
+
+</LinearLayout>

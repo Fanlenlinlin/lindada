@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.jionglemo.jionglemo_b.ZhiBo.JiongBiRecordActivity">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/toolbar"
+        android:background="@color/purple">
+        <ImageView
+            android:onClick="back"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/back_white"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="16dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="囧币收入记录"
+            android:textColor="#fff"
+            android:textSize="17sp"
+            android:layout_centerInParent="true"/>
+
+        <TextView
+            android:onClick="gotoJiongBiTop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#f8f400"
+            android:text="囧币贡献榜"
+            android:textSize="13sp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:padding="16dp"/>
+    </RelativeLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/jiongbiRecordRV"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    </android.support.v7.widget.RecyclerView>
+</LinearLayout>

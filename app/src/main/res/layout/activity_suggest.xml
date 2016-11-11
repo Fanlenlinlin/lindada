@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    android:orientation="vertical"
+    tools:context="com.jionglemo.jionglemo_b.HomePage.SuggestActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/toolbar"
+        android:background="?attr/colorPrimary">
+
+        <ImageView
+            android:onClick="back"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center"
+            android:src="@drawable/back"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="16dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#666"
+            android:textSize="20sp"
+            android:text="投诉建议"
+            android:layout_gravity="center"
+            android:layout_centerInParent="true"/>
+    </RelativeLayout>
+
+    <EditText
+        android:id="@+id/suggestET"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minLines="6"
+        android:layout_margin="16dp"
+        android:hint="请输入您的投诉或建议内容"
+        android:textColorHint="#666"
+        android:textSize="15sp"
+        android:textColor="#000"
+        android:gravity="top"
+        android:padding="8dp"
+        android:background="@drawable/juxing_ededed"/>
+
+    <TextView
+        android:onClick="confirm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="确定"
+        android:textColor="#fff"
+        android:textSize="16sp"
+        android:background="@drawable/juxing_ff0099_da"
+        android:layout_gravity="right"
+        android:layout_marginRight="16dp"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp"
+        android:paddingLeft="35dp"
+        android:paddingRight="35dp"/>
+</LinearLayout>

@@ -1,0 +1,55 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.jionglemo.jionglemo_b.CommonView.DeleteDialogFragment">
+
+    <TextView
+        android:id="@+id/titleTV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="删除确认"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:background="@color/purple"
+        android:textColor="#fff"
+        android:padding="12dp"/>
+
+    <TextView
+        android:id="@+id/messageTV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#000"
+        android:text="您确认要删除吗？"
+        android:textSize="16sp"
+        android:layout_margin="16dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:gravity="right">
+        <TextView
+            android:id="@+id/cancelTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="取消"
+            android:textColor="@color/purple"
+            android:textSize="15sp"
+            android:padding="5dp"/>
+        <TextView
+            android:id="@+id/deleteTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:text="删除"
+            android:textColor="@color/purple"
+            android:textSize="15sp"
+            android:padding="5dp"/>
+    </LinearLayout>
+
+
+</LinearLayout>

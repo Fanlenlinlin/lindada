@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <gradient
+        android:startColor="@color/purple"
+        android:centerColor="@color/purple"
+        android:endColor="@color/purple"
+        android:angle="90" />
+    <stroke android:width="2dp" android:color="#FFFFFFFF" /> <!--年月日间的间隔颜色以及宽度-->
+</shape>
