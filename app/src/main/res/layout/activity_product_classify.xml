@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    android:orientation="vertical"
+    tools:context="com.jionglemo.jionglemo_b.ProductManager.ProductClassifyActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/toolbar"
+        android:background="?attr/colorPrimary">
+
+        <ImageView
+            android:onClick="back"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center"
+            android:src="@drawable/back"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="16dp"/>
+
+        <TextView
+            android:id="@+id/classifyNameTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#666"
+            android:textSize="20sp"
+            android:layout_centerInParent="true"/>
+    </RelativeLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/productClassifyRV"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+    </android.support.v7.widget.RecyclerView>
+
+    <LinearLayout
+        android:visibility="gone"
+        android:id="@+id/noneProductLL"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:paddingBottom="80dp"
+        android:gravity="center_vertical">
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="0.5dp"
+            android:layout_weight="1"
+            android:background="#c2c2c2"/>
+        <TextView
+            android:id="@+id/noneProductTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="暂无，请添加商品"
+            android:textColor="#c2c2c2"
+            android:textSize="17sp"
+            android:layout_margin="5dp"/>
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="0.5dp"
+            android:layout_weight="1"
+            android:background="#c2c2c2"/>
+    </LinearLayout>
+</LinearLayout>

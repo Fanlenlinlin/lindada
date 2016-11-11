@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context=".Login.LoadActivity2">
+
+    <LinearLayout
+        android:id="@+id/loadLL"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:background="?attr/colorPrimary">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="登录"
+                android:textColor="#000"
+                android:textSize="20sp"
+                android:layout_gravity="center"/>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#eee"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/logo_titleIV"
+                android:layout_width="170dp"
+                android:layout_height="160dp"
+                android:paddingTop="40dp"
+                android:paddingBottom="40dp"
+                android:layout_gravity="center_horizontal"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginTop="20dp"
+                android:gravity="center_vertical"
+                android:background="@drawable/load_edittext_bg">
+
+                <EditText
+                    android:id="@+id/phoneET"
+                    android:layout_gravity="center_horizontal"
+                    android:paddingLeft="20dp"
+                    android:hint="请输入您的商家号/手机号"
+                    android:textColorHint="#666"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"
+                    android:textColor="#000"
+                    android:textSize="20sp"
+                    android:background="@null"/>
+
+                <ImageView
+                    android:onClick="dropdown"
+                    android:layout_width="50dp"
+                    android:layout_height="match_parent"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="20dp"
+                    android:src="@drawable/load_dropdown"/>
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/passwordET"
+                android:paddingLeft="20dp"
+                android:layout_gravity="center_horizontal"
+                android:hint="请输入登录密码"
+                android:textColorHint="#666"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginTop="15dp"
+                android:textColor="#000"
+                android:textSize="20sp"
+                android:background="@drawable/load_edittext_bg"
+                android:inputType="textPassword" />
+
+            <ImageView
+                android:id="@+id/loadIV"
+                android:onClick="load"
+                android:layout_width="130dp"
+                android:layout_height="130dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="25dp"
+                android:textSize="16sp"
+                android:layout_centerInParent="true"/>
+
+            <TextView
+                android:visibility="gone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="40dp"
+                android:text="忘记密码？"
+                android:textSize="16sp"
+                android:textColor="#666"
+                android:onClick="forgetPassword"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</android.support.design.widget.CoordinatorLayout>
+
+
+

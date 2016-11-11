@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.jionglemo.jionglemo_b.ProductManager.ProductShowActivity">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/topBarLL"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/toolbar"
+            android:background="?attr/colorPrimary">
+
+            <ImageView
+                android:onClick="back"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center"
+                android:src="@drawable/back"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="16dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#666"
+                android:textSize="20sp"
+                android:text="商品详情"
+                android:layout_centerInParent="true"/>
+        </RelativeLayout>
+
+        <WebView
+            android:id="@+id/tencentWebView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+    </LinearLayout>
+    <TextView
+        android:id="@+id/progressTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:textColor="@color/purple"
+        android:text="正在拼命加载中···"
+        android:textSize="18sp"/>
+</RelativeLayout>

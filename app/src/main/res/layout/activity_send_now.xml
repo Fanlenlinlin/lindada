@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#ededed"
+    tools:context="com.jionglemo.jionglemo_b.Order.SendNowActivity">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/toolbar"
+        android:background="?attr/colorPrimary">
+
+        <ImageView
+            android:onClick="back"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center"
+            android:src="@drawable/back"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="16dp"/>
+
+        <TextView
+            android:id="@+id/stateTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#666"
+            android:textSize="20sp"
+            android:text="立即发货"
+            android:layout_gravity="center"
+            android:layout_centerInParent="true"/>
+    </RelativeLayout>
+
+    <ScrollView
+        android:id="@+id/sendSV"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:orientation="vertical">
+            <LinearLayout
+                android:id="@+id/shopLL"
+                android:layout_width="match_parent"
+                android:layout_height="38dp"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:background="#fff"
+                android:gravity="center_vertical">
+                <TextView
+                    android:id="@+id/shopNameTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#000"
+                    android:textSize="15sp"
+                    android:text="店名"/>
+
+                <ImageView
+                    android:layout_width="12dp"
+                    android:layout_height="12dp"
+                    android:layout_marginLeft="10dp"
+                    android:src="@drawable/ic_chevron_right_black"/>
+
+                <TextView
+                    android:id="@+id/orderStateTV"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:textColor="@color/purple"
+                    android:textSize="15sp"
+                    android:text="等待卖家发货"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/goodLL"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:background="#ededed">
+                <LinearLayout
+                    android:layout_width="92dp"
+                    android:layout_height="92dp"
+                    android:layout_marginLeft="8dp"
+                    android:gravity="center"
+                    android:background="@drawable/juxing_c2c2c2_kuan">
+                    <ImageView
+                        android:id="@+id/goodIV"
+                        android:layout_width="90dp"
+                        android:layout_height="90dp"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="8dp"
+                    android:orientation="vertical"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="8dp">
+                    <TextView
+                        android:id="@+id/goodNameTV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:textColor="#000"
+                        android:text="商品名"/>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:id="@+id/renMingBiTV"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="#999"
+                            android:text="¥  "/>
+                        <TextView
+                            android:id="@+id/moneyTV"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="#999"
+                            android:text="150"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp"
+                android:background="#fff"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:text="共 "
+                    android:textColor="#000"/>
+
+                <TextView
+                    android:id="@+id/sumNumTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    android:textColor="#000"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=" 件商品"
+                    android:textColor="#000"/>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:text="合计 ¥ "
+                    android:textColor="#000"/>
+
+                <TextView
+                    android:id="@+id/sumMoneyTV"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    android:textColor="#000"/>
+
+                <TextView
+                    android:id="@+id/peisongWayTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:layout_marginRight="16dp"
+                    android:text="配送方式:包邮"
+                    android:textColor="#000"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:padding="16dp">
+                <TextView
+                    android:id="@+id/receiveNameTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="15sp"
+                    android:textColor="#000"
+                    android:text="收货人"/>
+
+                <TextView
+                    android:id="@+id/phoneTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:textSize="15sp"
+                    android:textColor="#000"
+                    android:text="联系电话"/>
+
+                <TextView
+                    android:id="@+id/addressTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:textSize="15sp"
+                    android:textColor="#000"
+                    android:text="收货地址"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:gravity="center_vertical">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="15sp"
+                        android:textColor="#000"
+                        android:text="物流单号："/>
+
+                    <EditText
+                        android:id="@+id/wuliuET"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:minWidth="200dp"
+                        android:textColor="#000"
+                        android:textSize="15sp"
+                        android:background="@drawable/juxing_000000_kuan"
+                        android:paddingTop="5dp"
+                        android:paddingBottom="5dp"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"/>
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/sendNowTV"
+                    android:layout_width="280dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="80dp"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginRight="25dp"
+                    android:layout_marginBottom="25dp"
+                    android:text="立即发货"
+                    android:textColor="#fff"
+                    android:background="@drawable/juxing_grey"
+                    android:padding="10dp"
+                    android:textSize="20sp"
+                    android:gravity="center"
+                    android:layout_gravity="center_horizontal"/>
+            </LinearLayout>
+        </LinearLayout>
+     </ScrollView>
+</LinearLayout>
